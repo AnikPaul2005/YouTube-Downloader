@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube Downloader</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">▶</span>
+            <span>YT<span class="highlight">Downloader</span></span>
+        </div>
+
+        <div class="nav-label">
+            FAST • SIMPLE • FREE
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+        <section class="hero">
+
+            <div class="badge">
+                ✨ SIMPLE VIDEO DOWNLOADER
+            </div>
+
+            <h1>
+                Download Videos<br>
+                <span>Without Limits.</span>
+            </h1>
+
+            <p class="subtitle">
+                Download videos and audio in your preferred
+                quality with a simple interface.
+            </p>
+
+        </section>
+
+
+        <section class="download-card">
+
+            <div class="input-heading">
+                YouTube Video URL
+            </div>
+
+            <div class="url-box">
+
+                <span class="link-icon">🔗</span>
+
+                <input
+                    type="url"
+                    id="videoUrl"
+                    placeholder="Paste your YouTube URL here..."
+                >
+
+                <button id="pasteBtn" class="paste-btn">
+                    Paste
+                </button>
+
+            </div>
+
+
+            <div class="section-heading">
+                Select Download Type
+            </div>
+
+            <div class="mode-selection">
+
+                <button class="mode-btn active"
+                        data-mode="video">
+
+                    🎬 Video
+
+                </button>
+
+                <button class="mode-btn"
+                        data-mode="audio">
+
+                    🎵 MP3 Audio
+
+                </button>
+
+            </div>
+
+
+            <div id="qualitySection">
+
+                <div class="section-heading">
+                    Video Quality
+                </div>
+
+                <select id="quality">
+
+                    <option value="1080">1080p - Full HD</option>
+
+                    <option value="720" selected>
+                        720p - HD
+                    </option>
+
+                    <option value="480">480p - SD</option>
+
+                    <option value="best">Best Available</option>
+
+                </select>
+
+            </div>
+
+
+            <button id="downloadBtn" class="download-btn">
+
+                <span>⬇</span>
+
+                Download Now
+
+            </button>
+
+
+            <div id="status" class="status"></div>
+
+
+            <div class="features">
+
+                <div>
+                    <span>✓</span> MP4 Video
+                </div>
+
+                <div>
+                    <span>✓</span> MP3 Audio
+                </div>
+
+                <div>
+                    <span>✓</span> HD Quality
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="info">
+
+            <h2>How to Download?</h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Copy URL</h3>
+                    <p>Copy the YouTube video link.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Select Quality</h3>
+                    <p>Choose your preferred quality.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Download</h3>
+                    <p>Save the file to your device.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 YT Downloader. Built with Python.
+        </p>
+
+        <p class="footer-note">
+            Use only for content you own or are authorized to download.
+        </p>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
